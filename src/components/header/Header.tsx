@@ -10,8 +10,8 @@ const Header = () => {
     <header className="w-full h-[6rem] bg-mainColor">
       <div className="flex justify-between items-center w-[1200px] h-full mx-auto">
         <p className={`text-[3.5rem] font-[400] ${ownglyphMeetme.className}`}>
-          <span className="text-[#BABC6D]">duck</span>
-          <span className="text-[#4C7090]">mate</span>
+          <span className="text-[#ffce31]">duck</span>
+          <span className="text-[#636363]">mate</span>
         </p>
       </div>
     </header>
