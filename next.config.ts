@@ -5,13 +5,15 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     domains: ["localhost", "*"],
   },
-
   webpack: (config) => {
     config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
+      test: /\.svg$/,
+      issuer: {
+        and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+      },
       use: ["@svgr/webpack"],
     });
+
     return config;
   },
 };

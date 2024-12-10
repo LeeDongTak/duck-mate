@@ -1,7 +1,7 @@
 import React from "react";
-import Check from "../../../../../public/icons/check.svg";
-import ArrowBottom from "../../../../../public/icons/arrowBottom.svg";
-import Image from "next/image";
+
+import Check from "@/assets/icons/check";
+import ArrowBottom from "@/assets/icons/arrow-bottom";
 import {
   SUB_ARTICLE_TOW_FILTER_LIST_ONE,
   SUB_ARTICLE_TOW_FILTER_LIST_TWO,
@@ -21,7 +21,7 @@ const SubArticle2 = () => {
           {SUB_ARTICLE_TOW_LIST.map(({ id, content }) => {
             return (
               <li key={id} className="flex items-center gap-[1.5rem]">
-                <Image src={Check} alt="체크 아이콘" />
+                <Check />
                 <p className="text-[2rem] leading-[2rem] font-[500]">
                   {content}
                 </p>
@@ -54,7 +54,7 @@ const SubArticle2 = () => {
               );
             })}
           </ul>
-          <Image src={ArrowBottom} alt="화살표이미지" />
+          <ArrowBottom />
           <ul className="flex justify-center gap-[1.2rem]">
             {SUB_ARTICLE_TOW_FILTER_LIST_TWO.map(({ id, content, isDone }) => {
               return (
