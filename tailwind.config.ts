@@ -1,4 +1,10 @@
 import type { Config } from "tailwindcss";
+import { PluginCreator } from "tailwindcss/types/config";
+import { newUtilities } from "./utils/tailwind-plugin";
+
+const pluginClassCreator: PluginCreator = ({ addUtilities }) => {
+  addUtilities(newUtilities);
+};
 
 export default {
   content: [
@@ -11,8 +17,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        mainColor: "var(--main-color)",
       },
     },
   },
-  plugins: [],
+  plugins: [pluginClassCreator],
 } satisfies Config;
